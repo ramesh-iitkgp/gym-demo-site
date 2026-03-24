@@ -1,0 +1,6 @@
+name,category,phone,address,rating,website,google_maps_url
+Cafe Delhi Heights,gym,+919876543210,"M Block, Greater Kailash Part I",4.5,None,https://maps.google.com/?q=Cafe Delhi Heights
+The Tea Castle,gym,+919898765432,"Hauz Khas Village, New Delhi",4.5,None,https://maps.google.com/?q=The Tea Castle
+Triveni Tea House,gym,+919765432109,"NDMC Building, Parliament Street",4.5,None,https://maps.google.com/?q=Triveni Tea House
+Karim's Cafe,gym,+919654321098,"Jama Masjid, Old Delhi",4.5,None,https://maps.google.com/?q=Karim's Cafe
+Cafe Turtle,gym,+919543210987,"Defence Colony, South Delhi",4.5,None,https://maps.google.com/?q=Cafe Turtle
