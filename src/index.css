@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-lime-400: #a3e635;
+  --color-lime-500: #84cc16;
+  --color-lime-600: #65a30d;
+  --color-neutral-850: #1f1f1f;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-heading: 'DM Sans', sans-serif;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #3f6212; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #65a30d; }
+
+/* Outlined text utility */
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
