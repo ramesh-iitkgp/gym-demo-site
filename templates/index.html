@@ -3,192 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitZone Gym - Premium Fitness Center</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Premium Barber Shop - Professional Grooming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; color: #fff; background: #1a1a1a; line-height: 1.6; }
+        body { font-family: 'Roboto', sans-serif; background: #f5f5f5; color: #333; }
         
-        .demo-badge { position: fixed; top: 10px; right: 10px; background: #ff6b6b; color: white; padding: 8px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; z-index: 1000; text-transform: uppercase; }
+        .demo-badge { position: fixed; top: 10px; right: 10px; background: #ff6b6b; color: white; padding: 8px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; z-index: 1000; }
         
-        header { position: fixed; top: 0; width: 100%; background: #1a1a1a; border-bottom: 2px solid #DC143C; z-index: 100; }
+        header { position: fixed; top: 0; width: 100%; background: #1a1a1a; color: white; border-bottom: 3px solid #D4AF37; z-index: 100; }
         nav { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #DC143C; letter-spacing: 2px; }
-        nav a { color: #fff; text-decoration: none; margin: 0 1.5rem; font-weight: 600; transition: color 0.3s; font-size: 13px; text-transform: uppercase; }
-        nav a:hover { color: #DC143C; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 28px; color: #D4AF37; }
+        nav a { color: #fff; text-decoration: none; margin: 0 1.5rem; font-weight: 600; font-size: 13px; }
+        nav a:hover { color: #D4AF37; }
         
-        .btn-primary { background: #DC143C; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; text-decoration: none; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; font-size: 12px; }
-        .btn-primary:hover { background: #b00937; transform: scale(1.05); }
+        .btn-primary { background: #D4AF37; color: #1a1a1a; padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 700; cursor: pointer; transition: all 0.3s; }
+        .btn-primary:hover { background: #c99c2a; transform: translateY(-2px); }
         
         section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .hero { margin-top: 70px; min-height: calc(100vh - 70px); background: linear-gradient(135deg, #1a1a1a, #2d2d2d); display: flex; align-items: center; justify-content: center; }
+        
+        .hero { margin-top: 70px; min-height: calc(100vh - 70px); background: linear-gradient(135deg, #1a1a1a, #2d2d2d); color: white; display: flex; align-items: center; justify-content: center; }
         .hero-content { text-align: center; }
-        .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: #DC143C; margin-bottom: 1rem; letter-spacing: 3px; text-transform: uppercase; }
-        .hero p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; color: #D4AF37; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         
         .section-header { text-align: center; margin-bottom: 3rem; }
-        .section-header .label { color: #DC143C; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.5rem; }
-        .section-header h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: #fff; margin-bottom: 1rem; letter-spacing: 2px; text-transform: uppercase; }
+        .section-header .label { color: #D4AF37; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
         
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .service-card { background: linear-gradient(135deg, #2d2d2d, #3d3d3d); padding: 2rem; border-left: 4px solid #DC143C; transition: all 0.3s; }
-        .service-card:hover { transform: translateX(10px); }
-        .service-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .service-card p { opacity: 0.8; }
+        .service-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .service-card h3 { color: #D4AF37; margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .service-card .price { color: #1a1a1a; font-weight: 700; font-size: 1.1rem; }
         
-        .programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .program-item { background: #2d2d2d; padding: 2rem; border: 1px solid #DC143C; }
-        .program-item h3 { color: #DC143C; font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .program-item .price { font-size: 1.5rem; color: #DC143C; font-weight: 700; margin-top: 1rem; }
-        
-        .contact-section { background: #2d2d2d; }
+        .contact-section { background: #1a1a1a; color: white; }
+        .contact-section h2 { color: #D4AF37; }
         .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .contact-card { background: #1a1a1a; padding: 1.5rem; border-radius: 4px; }
-        .contact-card h3 { color: #DC143C; margin-bottom: 0.5rem; }
+        .contact-card { background: #2d2d2d; padding: 1.5rem; }
+        .contact-card h3 { color: #D4AF37; }
         
-        .whatsapp-btn { display: inline-flex; gap: 0.5rem; background: #25D366; color: white; padding: 0.75rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s; }
-        .whatsapp-btn:hover { background: #20ba5a; transform: scale(1.05); }
+        .whatsapp-btn { display: inline-flex; gap: 0.5rem; background: #25D366; color: white; padding: 0.75rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; }
         
         footer { background: #0a0a0a; color: white; text-align: center; padding: 2rem; }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .section-header h2 { font-size: 2rem; }
-            nav { flex-wrap: wrap; }
-            nav a { margin: 0 0.5rem; font-size: 11px; }
-        }
     </style>
 </head>
 <body>
     <div class="demo-badge">Demo - Click WhatsApp</div>
-
     <header>
         <nav>
-            <div class="logo">💪 FITZONE</div>
+            <div class="logo">✂️ BARBER SHOP</div>
             <div style="display: flex; gap: 2rem;">
-                <a href="#about">About</a>
-                <a href="#programs">Programs</a>
+                <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div>
-                <a id="whatsappNav" href="#" class="btn-primary" style="min-width: 120px; text-align: center;">Join Now</a>
-            </div>
+            <a id="whatsappNav" href="#" class="btn-primary">Book Appointment</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1 id="businessName">TRANSFORM <br> YOUR BODY</h1>
-            <p id="businessDescription">Premier fitness center with expert trainers and state-of-the-art equipment</p>
+            <h1 id="businessName">Premium Grooming</h1>
+            <p id="businessDescription">Professional barber services for the modern gentleman</p>
             <div class="hero-buttons">
-                <a id="whatsappHero" href="#" class="btn-primary">Get Free Trial</a>
-                <a href="#programs" class="btn-primary" style="background: transparent; border: 2px solid #DC143C;">View Programs</a>
+                <a id="whatsappHero" href="#" class="btn-primary">Book Now</a>
             </div>
         </div>
     </section>
 
-    <section id="about">
+    <section id="services">
         <div class="section-header">
-            <span class="label">Why Choose Us</span>
-            <h2>Premium Facilities</h2>
+            <span class="label">Our Services</span>
+            <h2>Expert Grooming</h2>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <h3>🏋️ Strength Training</h3>
-                <p>Complete range of free weights, dumbbells, and machines</p>
+                <h3>✂️ Classic Haircut</h3>
+                <div class="price">₹300</div>
+                <p>Traditional haircut with expert styling</p>
             </div>
             <div class="service-card">
-                <h3>🧘 Yoga & Flexibility</h3>
-                <p>Certified trainers for yoga, stretching, and mobility work</p>
+                <h3>🧔 Full Treatment</h3>
+                <div class="price">₹500</div>
+                <p>Haircut + Beard trim + Shave</p>
             </div>
             <div class="service-card">
-                <h3>📊 Personalized Plans</h3>
-                <p>Customized workout and nutrition plans from experts</p>
-            </div>
-            <div class="service-card">
-                <h3>💪 Group Classes</h3>
-                <p>High-energy Zumba, Pilates, and CrossFit classes daily</p>
-            </div>
-            <div class="service-card">
-                <h3>🏊 Swimming Pool</h3>
-                <p>Olympic-sized pool with professional coaching</p>
-            </div>
-            <div class="service-card">
-                <h3>⚡ Modern Equipment</h3>
-                <p>Latest tech for cardio, strength, and functional fitness</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="programs">
-        <div class="section-header">
-            <span class="label">Our Programs</span>
-            <h2>Choose Your Plan</h2>
-        </div>
-        <div class="programs">
-            <div class="program-item">
-                <h3>🔵 BASIC</h3>
-                <p>✓ Gym access (24/7)</p>
-                <p>✓ Locker facility</p>
-                <p>✓ Basic assessment</p>
-                <div class="price">₹2,999/mo</div>
-            </div>
-            <div class="program-item">
-                <h3>🔴 PREMIUM</h3>
-                <p>✓ All Basic benefits</p>
-                <p>✓ Personal trainer sessions</p>
-                <p>✓ Group classes</p>
-                <p>✓ Nutrition guide</p>
-                <div class="price">₹5,999/mo</div>
-            </div>
-            <div class="program-item">
-                <h3>⭐ ELITE</h3>
-                <p>✓ All Premium benefits</p>
-                <p>✓ Dedicated PT</p>
-                <p>✓ Recovery services</p>
-                <p>✓ Priority support</p>
-                <div class="price">₹9,999/mo</div>
+                <h3>💈 Beard Grooming</h3>
+                <div class="price">₹200</div>
+                <p>Professional beard trim and styling</p>
             </div>
         </div>
     </section>
 
     <section class="contact-section" id="contact">
         <div class="section-header">
-            <span class="label">Get In Touch</span>
-            <h2>Visit FitZone</h2>
+            <span class="label">Get in Touch</span>
+            <h2>Visit Us</h2>
         </div>
         <div class="contact-info">
             <div class="contact-card">
                 <h3>📍 Location</h3>
-                <p id="contactLocation">Main Rd, Siliguri, West Bengal</p>
+                <p id="contactLocation">Main Street, Siliguri</p>
             </div>
             <div class="contact-card">
                 <h3>📞 Phone</h3>
                 <p id="contactPhone">+91 98765 43210</p>
             </div>
             <div class="contact-card">
-                <h3>🕐 Hours</h3>
-                <p>Mon-Fri: 5:00 AM - 11:00 PM</p>
-                <p>Sat-Sun: 6:00 AM - 10:00 PM</p>
+                <h3>⏰ Hours</h3>
+                <p>Daily: 9:00 AM - 8:00 PM</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 2rem;">
-            <a id="whatsappFooter" href="#" class="whatsapp-btn">Chat with us on WhatsApp</a>
+            <a id="whatsappFooter" href="#" class="whatsapp-btn">Book via WhatsApp</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 FitZone Gym. Transform yourself, today!</p>
-        <p>Demo Website - Contact us for membership</p>
+        <p>&copy; 2026 Premium Barber Shop.</p>
     </footer>
 
     <script src="../assets/inject-data.js"></script>
-    <script>
-        window.TEMPLATE_CATEGORY = 'gym';
-        window.DEMO_BUSINESS_LOCATION = 'Siliguri';
-    </script>
+    <script>window.TEMPLATE_CATEGORY = 'barber';</script>
 </body>
 </html>
